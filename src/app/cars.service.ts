@@ -11,6 +11,16 @@ export class CarsService {
 
   constructor(private http: HttpClient ) { }
 
+
+  getTitle(){
+    return this.http
+      .get('http://localhost:3000/title')
+      .pipe(
+        map(res=>res),
+        map((data:{value:string})=>data.value)
+      )
+  }
+
   getData(){
     const headers:HttpHeaders = new HttpHeaders({
       "Content-Type": "application/json; charset=utf8"

@@ -1,18 +1,27 @@
-<div class="col-8 offset-2">
-  <input type="text" class="form-control" [(ngModel)]="carName">
-  <button class="btn btn-success" (click)="loadData()">Upload Car</button>
-  <button class="btn btn-danger" (click)="addData()">Add Car</button>
-  <hr>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let car of cars">
-      <span class="badge badge-pill" [ngStyle]="{backgroundColor: car.color }">
-        {{car.id}}
-      </span> 
-        {{car.name}}
-    
-      <button class="btn btn-sm btn-info" (click)="setNewColor(car)">Change Color</button>
-      <button class="btn btn-sm btn-danger" (click)="deleteCar(car)">Delete Car</button>
+<!--
+  <div class="col-8 offset-2">
+    <input type="text" class="form-control" [(ngModel)]="carName"> -->
+    <!-- <button class="btn btn-success" (click)="loadData()">Upload Car</button>
+    <button class="btn btn-success" (click)="addData()">Add Car</button>
+    <h1>{{asyncText | async}}</h1>
+    <hr>
+    <input type="text" class="form-control" [(ngModel)]="inputVal" placeholder="Filtration">
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let car of cars | filter:inputVal:'name' ">
+        <span class="badge badge-pill" [ngStyle]="{backgroundColor: car.color }">
+          {{car.color}}
+        </span> 
+          {{car.name}}
+      
+        <button class="btn btn-sm btn-info" (click)="setNewColor(car)">Change Color</button>
+        <button class="btn btn-sm btn-danger" (click)="deleteCar(car)">Delete Car</button>
+  
+      </li>
+    </ul>
+  </div>
 
-    </li>
-  </ul>
-</div>
+-->
+
+
+<router-outlet></router-outlet>
