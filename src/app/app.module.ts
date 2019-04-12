@@ -20,6 +20,8 @@ import { methods } from './store/reducers/methods.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { MethodsEffects } from './store/effects/methods.effects';
 import { NgrxComponent } from './ngrx/ngrx.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { NgrxComponent } from './ngrx/ngrx.component';
     ProfileComponent,
     AboutComponent,
     NgrxComponent,
+    RxjsComponent,
+    AddComponent,
   ],
   imports: [
     BrowserModule,

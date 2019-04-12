@@ -9,19 +9,49 @@ import { AboutGuard } from './guard/about/about.guard';
 import { ExitAboutGuard } from './guard/about/exit.about.guard';
 import { AppComponent } from './app.component';
 import { NgrxComponent } from './ngrx/ngrx.component';
+import { AddComponent } from './add/add.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'profile',
+    redirectTo: 'ngrx',
     pathMatch: "full",
   },
   {
-    path: 'profile',
+    path: 'app',
+    component: AppComponent,
+  },
+  {
+    path: 'add',
+    component: AddComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'emit',
+    component: EventEmitterComponent,
+  },
+  {
+    path: 'reg',
+    component: RegComponent,
+  },
+  {
+    path: 'ngrx',
     component: NgrxComponent,
   },
   {
-    path: 'about',
+    path: 'rxjs',
+    component: RxjsComponent,
+  },
+  {
+    path: 'guard/profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'guard/about',
     component: AboutComponent,
     canActivate: [AboutGuard],
     canDeactivate: [ExitAboutGuard]
