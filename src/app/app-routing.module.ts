@@ -7,6 +7,8 @@ import { ProfileComponent } from './guard/profile/profile.component';
 import { AboutComponent } from './guard/about/about.component';
 import { AboutGuard } from './guard/about/about.guard';
 import { ExitAboutGuard } from './guard/about/exit.about.guard';
+import { AppComponent } from './app.component';
+import { NgrxComponent } from './ngrx/ngrx.component';
 
 const routes: Routes = [
   {
@@ -16,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent,
+    component: NgrxComponent,
   },
   {
     path: 'about',

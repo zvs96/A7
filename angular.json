@@ -141,5 +141,8 @@
       }
     }
   },
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  },
   "defaultProject": "A7"
 }

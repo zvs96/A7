@@ -13,6 +13,10 @@ export class RegComponent implements OnInit, OnDestroy{
 
   userForm: FormGroup;
   userTypes: string[];
+  arr = {
+    a:'assad',
+    b:'asdasasdsadas'
+  }
 
   constructor(private fb: FormBuilder, private userValidate: UserValidateService) { }
 

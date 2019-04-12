@@ -15,6 +15,12 @@ import { EventEmitterChildComponent } from './event-emitter/event-emitter-child/
 import { ProfileComponent } from './guard/profile/profile.component';
 import { AboutComponent } from './guard/about/about.component';
 
+import { StoreModule } from '@ngrx/store';
+import { methods } from './store/reducers/methods.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { MethodsEffects } from './store/effects/methods.effects';
+import { NgrxComponent } from './ngrx/ngrx.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +31,7 @@ import { AboutComponent } from './guard/about/about.component';
     EventEmitterChildComponent,
     ProfileComponent,
     AboutComponent,
+    NgrxComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,8 +39,18 @@ import { AboutComponent } from './guard/about/about.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+
+    StoreModule.forRoot({
+      _methods:methods,
+    }),
+    EffectsModule.forRoot([MethodsEffects]),
   ],
-  providers: [CarsService, UserValidateService],
+  providers: [
+    CarsService,
+    UserValidateService,
+
+    MethodsEffects
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
